@@ -14,3 +14,7 @@
  *= require_self
  */
 @import 'bootstrap';
+Nav{
+  display: flex;
+  justify-content: space-around;
+}
