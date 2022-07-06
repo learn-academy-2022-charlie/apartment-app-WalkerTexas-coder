@@ -19,7 +19,10 @@ class Header extends Component {
       <header>
         <h1>Hello Charlie</h1>
         <Nav className='header-links'>
-          <img src={CozyLogo} alt="Image of reclining alligator: click to go home" id='cozy_drivergator'/>
+          <NavLink to='/'>
+            <img src={CozyLogo} alt="Image of reclining alligator: click to go home" id='cozy_drivergator'/>
+          </NavLink>
+
           {logged_in &&
             <NavItem>
               <a href={sign_out_route} className="nav-link">Sign Out</a>
