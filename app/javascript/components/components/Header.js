@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Nav, NavItem } from 'reactstrap'
 import { NavLink } from 'react-router-dom'
-import './Header.scss'
+
 import CozyLogo from '../assets/cozy-logo.png'
 
 class Header extends Component {
@@ -28,6 +28,7 @@ class Header extends Component {
               <a href={sign_out_route} className="nav-link">Sign Out</a>
             </NavItem>
           }
+
           {!logged_in &&
             <NavItem>
               <a href={sign_in_route} className="nav-link">Sign In</a>
@@ -45,6 +46,12 @@ class Header extends Component {
           <NavItem>
            <NavLink to='/apartmentnew'> Add an apartment </NavLink>
           </NavItem>
+
+          {logged_in &&
+            <NavItem>
+              <NavLink to='/myapartments'> My Apartments </NavLink>
+            </NavItem>
+          }
 
         </Nav>
       </header>

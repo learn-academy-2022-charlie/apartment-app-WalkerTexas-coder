@@ -19,7 +19,7 @@ user = User.where(email: 'test@example.com').first_or_create(password: '12345678
       bedrooms: 2, 
       bathrooms: 2, 
       pets: "of course",
-      image: "www.urlhelper.com"
+      image: "https://image1.apartmentfinder.com/i2/vR-FS-v6VW0KEvIuo8cB91hohNopx7NWVIMlJrQE7Pc/110/image.jpg"
     },
     {
       street: "42 Wallaby Way",
@@ -31,7 +31,7 @@ user = User.where(email: 'test@example.com').first_or_create(password: '12345678
       bedrooms: 10, 
       bathrooms: 1, 
       pets: "sure",
-      image: "www.urlhelper.com"
+      image: "https://image1.apartmentfinder.com/i2/vR-FS-v6VW0KEvIuo8cB91hohNopx7NWVIMlJrQE7Pc/110/image.jpg"
     }
   ]
 
