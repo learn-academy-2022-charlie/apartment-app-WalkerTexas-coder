@@ -9,18 +9,18 @@ import {
   Button
 } from 'reactstrap';
 
-export default class ApartmentIndex extends Component {
+export default class ApartmentProtectedIndex extends Component {
   render() {
     const { apartments } = this.props
     console.log("props.apartments:", apartments);
     return (
       <>
-        <h3>ApartmentIndex</h3>
+        <h3>My Apartments</h3>
         <div>
           {apartments && apartments.map((value, index)=> {
             return ( 
             <Card key={index}>
-                <CardImg className="card-img" top width="100%" src={value.image} alt="Card image cap" />
+              <CardImg className="card-img" top width="100%" src={value.image} alt="Card image cap"  />
               <CardBody>
                 <CardTitle>{value.street}</CardTitle>
                 <CardSubtitle>{value.city}</CardSubtitle>
@@ -29,8 +29,12 @@ export default class ApartmentIndex extends Component {
                 <CardText>{value.price}</CardText>
                 <CardText>{value.bedrooms}</CardText>
                 <CardText>{value.bathrooms}</CardText>
+                
                 <CardText>{value.pets}</CardText>
-                <Button>Button</Button>
+                <div className='button-container'>
+                  <Button>Edit</Button>
+                  <Button>Delete</Button>
+                </div>
               </CardBody>
             </Card>
             )

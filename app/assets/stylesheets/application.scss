@@ -14,7 +14,14 @@
  *= require_self
  */
 @import 'bootstrap';
-Nav{
+.header-links{
   display: flex;
   justify-content: space-around;
+}
+#cozy_drivergator{
+  height: 10em;
+  
+}
+.card-img{
+  height: 20em;
 }
